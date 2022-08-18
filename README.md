@@ -8,5 +8,5 @@
 
 ## Как создать своего бота?
 Необходимо установить pyTelegramBotAPI. Для этого используйте
->pip install pyTelegramBotAPI
+  >pip install pyTelegramBotAPI
 В файле roman_bot.py можно указать свой токен, а также заполнить поля "Greeting text", вставить свою картинку в поле ошибок.

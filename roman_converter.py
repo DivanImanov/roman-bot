@@ -35,7 +35,7 @@ class RomanNumerals:
 
 
 def direction(text):
-    arabic = str(list(range(10)))
+    arabic = [str(i) for i in list(range(10))]
     roman = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
     text = text.upper()
     text_type_arabic = True

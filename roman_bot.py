@@ -9,9 +9,10 @@ def start(m, res=False):
 
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
-    if roman_converter.direction(message.text) != 'Error':
-        bot.send_message(message.chat.id, roman_converter.direction(message.text))
-    elif roman_converter.direction(message.text) == 'Error':
+    result = roman_converter.RomanNumerals.direction(message.text)
+    if result != 'Error':
+        bot.send_message(message.chat.id, result)
+    elif result == 'Error':
         bot.send_photo(message.chat.id, 'https://www.freeiconspng.com/uploads/sign-error-icon-10.png', caption='Error!')
 
 bot.polling(none_stop=True, interval=0)
